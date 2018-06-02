@@ -1,0 +1,34 @@
+{
+  "name": "mariota",
+  "version": "0.0.1",
+  "description": "Your daily dose of humour",
+  "main": "index.php",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fatasuir9/mariota.git"
+  },
+  "keywords": [
+    "Mariota",
+    "Daily",
+    "Humour",
+    "PWA",
+    "web"
+  ],
+  "author": "Ghis Bakour",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fatasuir9/mariota/issues"
+  },
+  "homepage": "https://github.com/fatasuir9/mariota#readme"
+}
