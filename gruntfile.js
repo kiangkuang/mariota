@@ -7,16 +7,18 @@ module.exports = function(grunt) {
         base: 'build',
 
         // Source build directory: Global
-	jade: 'build/jade',
-        sass: 'build/sass'
+		jade: 'build/jade',
+        sass: 'build/sass',
+		js: 'build/js'
     },
 
     distDir:{
         base: 'public',
 
         // Destination public directory: Global
-	view: 'public/views',
-        css: 'public/css'
+		view: 'public/views',
+        css: 'public/css',
+		js: 'public/js'
     },
 
     // Tasks & Configurations
@@ -72,7 +74,23 @@ module.exports = function(grunt) {
         },
     },
 
-    // Task no. 3: Watch
+	// Task no. 4: Uglify
+    uglify:{
+        options:{
+	        mangle: false, // Avoid functions - variables rename
+	        preserveComments: /(?:^!|@(?:license|preserve|cc_on))/
+			// Preserve all comments that start with a bang (!)
+    	},
+	    dist:{
+	        files:[{
+	            '<%= distDir.js %>/script.min.js':[
+	                '<%= srcDir.js %>/script.js'
+            	],
+        	}]
+    	},
+    },
+
+    // Task no. 5: Watch
     watch:{
         options:{
             spawn: false,
@@ -93,7 +111,7 @@ module.exports = function(grunt) {
     // Combined Tasks
 
     // Deployment
-    grunt.registerTask('deploy',['jade', 'htmlmin', 'sass']);
+    grunt.registerTask('deploy',['jade', 'htmlmin', 'sass', 'uglify']);
 
     //Default
     grunt.registerTask('default',['watch']);
@@ -102,6 +120,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 };

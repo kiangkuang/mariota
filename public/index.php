@@ -1,6 +1,7 @@
-<html>
-<head></head>
-<body>
-<h1>Mariota</h1>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><title>Mariota | Your daily dose of humour</title><meta charset="utf-8"><meta content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,minimal-ui" name="viewport"><meta content="yes" name="mobile-web-app-capable"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="Mariota | Your daily dose of humour" name="title"><meta content="" name="description"><meta content="Mariota | Your daily dose of humour" property="og:title"><meta content="" property="og:description"><meta content="website" property="og:type"><meta content="http://fatasuir9.com" property="og:url"><meta content="http://fatasuir9.com/images/logo-b.png" property="og:image"><meta property="fb:app_id" content=""><meta content="Mariota | Your daily dose of humour" name="twitter:site"><meta content="Mariota | Your daily dose of humour" name="twitter:title"><meta content="" name="twitter:description"><meta content="summary" name="twitter:card"><meta content="http://fatasuir9.com" name="twitter:url"><meta content="images/logo-b.png" name="twitter:image"><link href="images/logo.png" rel="icon" type="image/png"><link href="css/style.css" rel="stylesheet" type="text/css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-', '');
+    ga('send', 'pageview');</script></head><body><div class="splash"><div class="content"><h1 class="logo">Mario<span>ta</span></h1><h4 class="slogan">Your daily dose of humour!</h4></div></div><div class="main"><div class="header"><div class="header__content"><h1 class="logo">Mariota</h1><h4 class="slogan">Your daily dose of humour!</h4></div></div><div class="humour"><div class="humour__content"><div class="humour__joke">Did you hear the one about the guy with the broken hearing aid? Neither did he.</div><h6 class="humour__tag">General</h6></div><div class="humour__reload"><img src="../images/reload.svg" width="30"></div></div></div><script type="text/javascript" src="js/script.min.js"></script></body></html>
