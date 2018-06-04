@@ -10,16 +10,16 @@
   <meta content="Mariota | Your daily dose of humour" property="og:title">
   <meta content="" property="og:description">
   <meta content="website" property="og:type">
-  <meta content="http://fatasuir9.com" property="og:url">
-  <meta content="http://fatasuir9.com/images/logo-b.png" property="og:image">
+  <meta content="http://mariota.com" property="og:url">
+  <meta content="http://mariota.com/images/logo.png" property="og:image">
   <meta property="fb:app_id" content="">
   <!-- Twitter-->
   <meta content="Mariota | Your daily dose of humour" name="twitter:site">
   <meta content="Mariota | Your daily dose of humour" name="twitter:title">
   <meta content="" name="twitter:description">
   <meta content="summary" name="twitter:card">
-  <meta content="http://fatasuir9.com" name="twitter:url">
-  <meta content="images/logo-b.png" name="twitter:image">
+  <meta content="http://mariota.com" name="twitter:url">
+  <meta content="images/logo.png" name="twitter:image">
   <link href="images/logo.png" rel="icon" type="image/png">
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <script>
