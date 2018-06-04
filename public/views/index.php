@@ -51,7 +51,7 @@
         <div class="humour__joke">Did you hear the one about the guy with the broken hearing aid? Neither did he.</div>
         <h6 class="humour__tag">General</h6>
       </div>
-      <div class="humour__reload"><img src="../images/reload.svg" width="30"></div>
+      <div onclick="void(0)" class="humour__reload"><img src="../images/reload.svg" width="30"></div>
     </div>
   </div>
   <script type="text/javascript" src="js/script.min.js"></script>
