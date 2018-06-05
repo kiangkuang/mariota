@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 				cwd: '<%= srcDir.jade %>',
 				src: ['**/*.jade'],
 				dest: '<%= distDir.view %>',
-				ext: '.php'
+				ext: '.html'
 			}]
 		}
 	},
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 				collapseWhitespace: true
 			},
 			files: {
-				'<%= distDir.base %>/index.php': '<%= distDir.view %>/index.php',
+				'<%= distDir.base %>/index.html': '<%= distDir.view %>/index.html',
 			}
 		},
 	},
@@ -104,14 +104,18 @@ module.exports = function(grunt) {
 			files: '<%= srcDir.sass %>/**/*.{scss,sass}',
 			tasks: ['sass']
 		},
+        js: {
+            files: '<%= srcDir.js %>/**/*.js',
+            tasks: ['uglify']
+        },
     },
 
     });
 
     // Combined Tasks
 
-    // Deployment
-    grunt.registerTask('deploy',['jade', 'htmlmin', 'sass', 'uglify']);
+    // Build
+    grunt.registerTask('build',['jade', 'htmlmin', 'uglify', 'sass']);
 
     //Default
     grunt.registerTask('default',['watch']);

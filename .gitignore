@@ -2,4 +2,6 @@
 
 temp
 node_modules/*
-public/views/templates/*
+
+public/*
+!public/images*
