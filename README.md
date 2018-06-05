@@ -6,10 +6,7 @@ Your daily dose of humour!
 
 
 ## Setup instructions
-Install npm
-```
-npm install npm@latest -g
-```
+Install [nodeJS](https://nodejs.org/en/)
 
 Run `npm install` to install all project dependencies
 
