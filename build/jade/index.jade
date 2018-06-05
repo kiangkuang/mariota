@@ -1,0 +1,26 @@
+doctype html
+!= "<html lang='en'>"
+	head
+		title='Mariota | Your daily dose of humour'
+		include templates/head.jade
+	body
+		.splash
+			.content
+				h1.logo Mario<span>ta</span>
+				h4.slogan Your daily dose of humour!
+
+		.main
+			.header
+				.header__content
+					h1.logo Mariota
+					h4.slogan Your daily dose of humour!
+
+			.humour
+				.humour__content
+					.humour__joke Did you hear the one about the guy with the broken hearing aid? Neither did he.
+					h6.humour__tag General
+				.humour__reload(onclick='void(0)')
+					img(src='../images/reload.svg' width='30')
+
+		include templates/footer.jade
+!= "</html>"

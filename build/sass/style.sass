@@ -1,0 +1,245 @@
+/*!
+ *      #####
+ *     #### _\_  ________
+ *     ##=-[.].]| \      \
+ *     #(    _\ |  |------|
+ *      #   __| |  ||||||||
+ *       \  _/  |  ||||||||
+ *    .--'--'-. |  | ____ |
+ *   / __      `|__|[o__o]|
+ * _(____nm_______ /____\____
+ *
+ * @file
+ * Global Stylesheets
+ *
+ * @author
+ * Ghis Bakour <hello@fatasuir9.com>
+ *
+ * @copyright
+ * Copyright (c) fatasuir9.com, Ghis Bakour, 2018
+ *
+ */
+
+
+/*------------------------------------*\
+ *    $IMPORTS
+ *\*------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900')
+
+@import 'normalize'
+@import 'mixins'
+
+/*------------------------------------*\
+ *    $GLOBAL
+ *\*------------------------------------
+
+*
+	margin: 0
+	padding: 0
+
+body
+	font-family: 'Source Sans Pro', sans-serif
+	font-size: 62.5%
+
+h1
+	font-size: 2.4rem
+	letter-spacing: .5px
+	margin-bottom: 0
+	margin-top: 0
+	text-transform: uppercase
+
+h4
+	font-size: 1rem
+	font-weight: 300
+	letter-spacing: .5px
+
+h6
+	font-size: .8rem
+	font-weight: 400
+
+
+
+/*------------------------------------*\
+ *    $EXTENDS
+ *\*------------------------------------
+
+
+.fixed
+	bottom: 0
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+
+.flex
+	display: flex
+	align-items: center
+	justify-content: center
+
+
+/*------------------------------------*\
+ *    $KEYFRAMES
+ *\*------------------------------------
+
+@keyframes spin
+	100%
+		@include vendor(transform, rotate(360deg))
+
+
+@keyframes splash
+	0%
+		@include vendor(opacity, 1)
+	50%
+		@include vendor(opacity, 0)
+		top: -100%
+	100%
+		@include vendor(opacity, 0)
+		top: -100%
+		left: -50%
+		height: 0
+		width: 0
+
+
+/*------------------------------------*\
+ *    $SPLASH
+ *\*------------------------------------
+
+.splash
+	@include vendor(animation, splash 1s ease-in-out 4s forwards)
+	@include background-size(cover)
+	@extend .fixed
+	background-image: url(../images/splash.png)
+	background-position: 55% 100%
+	background-color: #543E43
+	color: #FFF
+	text-align: center
+	z-index: 1
+
+	&:before
+		content: ''
+		background: -moz-linear-gradient(top, rgba(49,20,25,1) 0%, rgba(254,117,120,.2) 100%)
+		background: -webkit-linear-gradient(top, rgba(49,20,25,1) 0%,rgba(254,117,120,.2) 100%)
+		background: linear-gradient(to bottom, rgba(49,20,25,1) 0%,rgba(254,117,120,.2) 100%)
+		bottom: 0
+		height: 100%
+		left: 0
+		position: absolute
+		top: 0
+		width: 100%
+
+	.content
+		position: relative
+		top: 6%
+		z-index: 2
+
+	.logo
+		color: #FE7678
+		text-shadow: 0 1px 0 rgb(119, 57, 58)
+
+		span
+			color: #FFF
+
+
+/*------------------------------------*\
+ *    $MAIN
+ *\*------------------------------------
+
+.main
+	@extend .fixed
+	background: #EBE4E8
+	height: 100%
+	text-align: center
+	overflow-y: scroll
+	width: 100%
+	z-index: 0
+
+	display: flex
+	flex-direction: column
+	align-content: stretch
+
+	.header
+		@extend .flex
+		background: #FF667E
+		height: 30%
+		color: #FFF
+
+		.header__content
+			margin-top: -40px
+
+
+	.humour
+		@extend .flex
+		@include vendor(border-radius, 10px)
+		position: relative
+		background: rgb(255, 255, 255)
+		top: 0
+		width: 80%
+		left: 5%
+		right: 5%
+		padding-right: 5%
+		padding-top: 5%
+		padding-left: 5%
+		padding-bottom: 12%
+		margin-top: -4em
+		min-height: 56%
+
+		.humour__joke
+			font-size: 1.6rem
+			font-weight: 300
+			line-height: 2rem
+			margin-bottom: 1em
+
+		.humour__tag
+			@include vendor(border-radius, 10px)
+			background: #EBE4E8
+			color: #FFF
+			max-width: 40%
+			margin-left: auto
+			margin-right: auto
+			padding: 4px 12px 4px 12px
+			width: 20%
+
+
+		.humour__reload
+			@include vendor(border-radius, 50%)
+			background: #FF667E
+			position: absolute
+			padding: 16px 5px
+			width: 60px
+			bottom: -32px
+
+			&:hover,
+			&:focus,
+			&:active
+				img
+					@include vendor(animation, spin 1s linear 1)
+
+
+
+/*------------------------------------*\
+ *    $MEDIA QUERIES
+ *\*------------------------------------
+
+@media screen and (min-width: 375px) and (max-width: 812px) and (orientation: landscape)
+	.main
+		.header
+			display: none
+
+	.main .humour
+		height: 70%
+		padding-bottom: 8%
+		padding-top: 4%
+		margin-top: 4%
+		margin-bottom: 8%
+
+		.humour__joke
+			font-size: 1.4rem
+			line-height: 2rem
+
+
+/*------------------------------------*\
+ *    $SUPPORTS
+ *\*------------------------------------
+
+@supports (display: flex)

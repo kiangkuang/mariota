@@ -11,7 +11,6 @@ Install npm
 npm install npm@latest -g
 ```
 
-Install all project dependencies
 Run `npm install` to install all project dependencies
 
 
@@ -26,5 +25,5 @@ Run `grunt watch`
 
 
 ## Author
-- Ghis - [Official website](https://fatasuir9.com/)
+- Ghis - [fatasuir9.com](https://fatasuir9.com/)
 - See also list of [contributors](https://github.com/fatasuir9/mariota/graphs/contributors) who participated in this project.
