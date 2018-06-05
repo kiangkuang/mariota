@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 		view: 'public/views',
         css: 'public/css',
 		js: 'public/js',
-		image: 'build/images'
+		image: 'public/images'
     },
 
     // Tasks & Configurations
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
     // Combined Tasks
 
     // Build
-    grunt.registerTask('build',['jade', 'htmlmin', 'sass', 'uglify']);
+    grunt.registerTask('build',['jade', 'htmlmin', 'sass', 'uglify', 'image']);
 
     //Default
     grunt.registerTask('default',['watch']);
