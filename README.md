@@ -11,7 +11,11 @@ Install [nodeJS](https://nodejs.org/en/)
 Run `npm install` to install all project dependencies
 
 
-## Running project
+## Building project
+Run `grunt build`
+
+
+## Developing project
 Run `grunt watch`
 
 
