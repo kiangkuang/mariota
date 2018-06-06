@@ -59,8 +59,6 @@ module.exports = function(grunt) {
     sass:{
         options:{
             style: 'compressed', // Sass file style
-            noCache: false, // Disable the noCache
-            cacheLocation: 'temp/sass', // Cached sass location
             update: true // Only compile changed files
         },
         dist:{
