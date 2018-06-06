@@ -1,8 +1,5 @@
 .DS_Store
 
-temp
 node_modules/*
 
 public/*
-!public/manifest.json
-!public/service-worker.js
