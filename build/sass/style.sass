@@ -83,8 +83,10 @@ h6
  *\*------------------------------------
 
 @keyframes spin
-  100%
+  0%
     @include vendor(transform, rotate(360deg))
+  100%
+    @include vendor(transform, rotate(0deg))
 
 
 @keyframes splash
@@ -92,11 +94,9 @@ h6
     @include vendor(opacity, 1)
   50%
     @include vendor(opacity, 0)
-    top: -100%
   100%
     @include vendor(opacity, 0)
-    top: -100%
-    left: -50%
+    top: -200%
     height: 0
     width: 0
 
@@ -106,7 +106,6 @@ h6
  *\*------------------------------------
 
 .splash
-  @include vendor(animation, splash 1s ease-in-out 4s forwards)
   @include background-size(cover)
   @extend .fixed
   background-image: url(../images/splash.png)
@@ -115,6 +114,10 @@ h6
   color: #FFF
   text-align: center
   z-index: 1
+
+  &.hide
+    @include vendor(animation, splash 1s ease-in-out 1s forwards)
+
 
   &:before
     content: ''
