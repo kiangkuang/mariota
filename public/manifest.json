@@ -1,0 +1,9 @@
+{
+	"name": "Mariota | Your daily dose of humour",
+	"short_name": "Mariota",
+	"theme_color": "#ff667e",
+	"background_color": "#ebe4e8",
+	"display": "fullscreen",
+	"scope": "/",
+	"start_url": "/"
+}

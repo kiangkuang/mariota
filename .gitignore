@@ -3,4 +3,5 @@
 node_modules/*
 
 public/*
-!public/images*
+!public/manifest.json
+!public/service-worker.js

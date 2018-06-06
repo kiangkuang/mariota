@@ -9,7 +9,8 @@ module.exports = function(grunt) {
         // Source build directory: Global
 		jade: 'build/jade',
         sass: 'build/sass',
-		js: 'build/js'
+		js: 'build/js',
+		image: 'build/images'
     },
 
     distDir:{
@@ -18,7 +19,8 @@ module.exports = function(grunt) {
         // Destination public directory: Global
 		view: 'public/views',
         css: 'public/css',
-		js: 'public/js'
+		js: 'public/js',
+		image: 'public/images'
     },
 
     // Tasks & Configurations
@@ -88,7 +90,19 @@ module.exports = function(grunt) {
     	},
     },
 
-    // Task no. 5: Watch
+	// Task no. 5: Image
+    image:{
+        dynamic:{
+            files:[{
+                expand: true,
+                cwd: '<%= srcDir.image %>',
+                src: ['**/*.{png,jpg,gif,svg}'],
+                dest: '<%= distDir.image %>'
+            }]
+        },
+    },
+
+    // Task no. 6: Watch
     watch:{
         options:{
             spawn: false,
@@ -113,7 +127,7 @@ module.exports = function(grunt) {
     // Combined Tasks
 
     // Build
-    grunt.registerTask('build',['jade', 'htmlmin', 'uglify', 'sass']);
+    grunt.registerTask('build',['jade', 'htmlmin', 'sass', 'uglify', 'image']);
 
     //Default
     grunt.registerTask('default',['watch']);
@@ -123,6 +137,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-image');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 };

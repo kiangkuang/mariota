@@ -1,3 +1,4 @@
+// API: Joke Loading
 function loadJoke(){
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -13,3 +14,12 @@ function loadJoke(){
 }
 
 loadJoke();
+
+
+// CSS Animation: Reload button
+$('.humour__reload').on('click',function() {
+	var $this = $(this).addClass('animate');
+	window.setTimeout(function(){
+		$this.removeClass('animate');
+	}, 1000);
+});
