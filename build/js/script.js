@@ -4,6 +4,7 @@ function loadJoke() {
     .done(function(joke) {
         $('.humour__joke').text(joke.setup + ' ' + joke.punchline);
         $('.humour__tag').text(joke.type);
+        $('.splash').addClass('hide');
     });
 }
 
