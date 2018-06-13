@@ -1,5 +1,13 @@
+// Check for service worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+            .register('service-worker.js')
+            .then(function() { console.log('Service Worker Registered'); });
+}
+
+
 // API: Joke Loading
-var lock = false
+var lock = false;
 var jokes = [];
 loadJoke();
 
@@ -19,6 +27,6 @@ function loadJoke(retry) {
             } else {
                 loadJoke(true);
             }
-        });    
+        });
     }
 }
