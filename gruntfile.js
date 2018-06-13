@@ -85,9 +85,9 @@ module.exports = function(grunt) {
             files:[{
                 '<%= distDir.js %>/script.min.js': [
                     '<%= srcDir.js %>/libs/**/*.js',
-                    '<%= srcDir.js %>/service-worker.js',
                     '<%= srcDir.js %>/script.js'
-                ]
+                ],
+                '<%= distDir.js %>/service-worker.min.js': '<%= srcDir.js %>/service-worker.js'
             }]
         },
     },

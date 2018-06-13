@@ -2,12 +2,12 @@
 var cacheName = 'mariota';
 var filesToCache = [
   '/',
-  'index.html',
-  'js/script.js',
-  'css/style.css',
-  'images/logo.png',
-  'images/reload.svg',
-  'images/splash.png'
+  '/js/script.min.js',
+  '/js/service-worker.min.js',
+  '/css/style.css',
+  '/images/logo.png',
+  '/images/reload.svg',
+  '/images/splash.png'
 ];
 
 self.addEventListener('install', function(e) {
